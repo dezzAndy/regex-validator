@@ -1,0 +1,55 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ValidadorGUI"
+        mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="420"
+        x:Class="ValidadorGUI.MainWindow"
+        Title="Validador de Cadenas"
+        Width="640"
+        Height="420"
+        WindowStartupLocation="CenterScreen">
+
+    <StackPanel Margin="24" Spacing="16">
+
+        <TextBlock Text="Validador de cadenas con expresiones regulares"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock Text="Escribe la cadena:"/>
+        <TextBox x:Name="InputBox"
+                 PlaceholderText="Escribe aquí la cadena a validar…"
+                 MinHeight="40"
+                 FontFamily="monospace"/>
+
+        <ComboBox x:Name="TipoBox"
+                  HorizontalAlignment="Stretch"
+                  SelectedIndex="0">
+            <ComboBoxItem Content="Teléfono (10 dígitos)"/>
+            <ComboBoxItem Content="Correo electrónico"/>
+            <ComboBoxItem Content="CURP"/>
+            <ComboBoxItem Content="Password seguro"/>
+            <ComboBoxItem Content="RFC"/>
+            <ComboBoxItem Content="Dirección IP v4/v6"/>
+            <ComboBoxItem Content="Cumpleaños (dd/mm/aaaa)"/>
+            <ComboBoxItem Content="Placas de automóvil (AAA-1234)"/>
+        </ComboBox>
+
+        <Button x:Name="ValidarButton"
+                Content="Validar"
+                HorizontalAlignment="Center"
+                MinWidth="160"
+                MinHeight="40"/>
+
+        <Border x:Name="ResultPanel"
+                Background="#1F000000"
+                CornerRadius="8"
+                Padding="16">
+            <TextBlock x:Name="ResultText"
+                       HorizontalAlignment="Center"
+                       FontSize="16"
+                       FontWeight="SemiBold"/>
+        </Border>
+    </StackPanel>
+</Window>
