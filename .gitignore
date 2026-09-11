@@ -1,0 +1,11 @@
+# Artefactos de compilación de la biblioteca compartida (Go c-shared)
+lib/
+
+# Salida de compilación de .NET y paquetes restaurados
+bin/
+obj/
+
+# Archivos del sistema y del editor
+.DS_Store
+*.swp
+*.user
